@@ -31,4 +31,4 @@ app.include_router(BoardMapping, tags=["boards"], prefix=settings.PATH_SERVER)
 
 @app.get("/", tags=["Root"])
 async def read_root():
-    return {"message": "Hello Python!"}
+    return {"message": "Hello Python with mongodb!"}

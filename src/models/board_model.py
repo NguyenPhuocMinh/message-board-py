@@ -8,7 +8,7 @@ class BoardModel(BaseModel):
     registerDate: datetime
     title: str = Field(..., max_length=100)
     name: str = Field(..., max_length=50)
-    text: str = Field(..., max_length=1000)
+    description: str = Field(..., max_length=1000)
     deleted: Optional[bool] = False
     v : Optional[int] = 0
 

@@ -18,7 +18,7 @@ def convert_responses(board, index) -> dict:
         "registerDate": date_format,
         "title": board["title"],
         "name": board["name"],
-        "text": board["text"],
+        "description": board["description"],
         "index": index,
     }
 
@@ -34,7 +34,7 @@ def convert_response(board) -> dict:
         "registerDate": date_format,
         "title": board["title"],
         "name": board["name"],
-        "text": board["text"],
+        "description": board["description"],
     }
 
 # get all boards

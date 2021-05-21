@@ -63,17 +63,17 @@ async def create_board(request: Request, board: BoardModel = Body(...)):
                     status_code=404, detail="Tên không vượt quá 50 ký tự"
                 )
 
-    if(board['text'] is None):
+    if(board['description'] is None):
         raise HTTPException(status_code=404, detail="Vui lòng nhập nội dung")
     else:
-        if(board['text'].strip() == ''):
+        if(board['description'].strip() == ''):
             raise HTTPException(
                 status_code=404, detail="Vui lòng không nhập khoảng trống cho nội dung"
             )
         else:
-            len_text = len(board['text'])
+            len_description = len(board['description'])
 
-            if(len_text > 1000):
+            if(len_description > 1000):
                 raise HTTPException(
                     status_code=404, detail="Nội dung không vượt quá 1000 ký tự"
                 )
